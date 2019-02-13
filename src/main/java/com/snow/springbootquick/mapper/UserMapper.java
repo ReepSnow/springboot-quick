@@ -2,6 +2,7 @@ package com.snow.springbootquick.mapper;
 
 import com.snow.springbootquick.entity.User;
 import org.apache.ibatis.annotations.Mapper;
+import tk.mybatis.mapper.common.BaseMapper;
 
 import java.util.List;
 
@@ -11,6 +12,6 @@ import java.util.List;
  * @EMAIL wptxc@foxmail.com
  */
 @Mapper
-public interface UserMapper {
+public interface UserMapper extends BaseMapper<User> {
     public List<User> queryUserList();
 }
